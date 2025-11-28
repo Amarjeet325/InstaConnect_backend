@@ -25,7 +25,6 @@ try {
      if (me._id.equals(targetId)) 
      return res.status(400).json({ message: 'Cannot follow yourself' });
 
-
      const target = await User.findById(targetId);
      if (!target)    
      return res.status(404).json({ message: 'Target user not found' });

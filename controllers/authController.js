@@ -100,4 +100,5 @@ exports.login = async (req, res) => {
 exports.logout = (req, res) => {
     res.clearCookie(process.env.COOKIE_NAME);
     res.json({ message: 'Logged out successfully' });
+    console.log('User logged out');
 };
