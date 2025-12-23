@@ -28,7 +28,8 @@ app.use('/api/user', require('./routes/user'));
 app.use('/api/post', require('./routes/post'));
 app.use('/api/comment', require('./routes/comment'));
 
-
+// error handler middleware
+app.use( require('./middleware/errorHandler') );  
 
 app.listen( PORT, () => {
     console.log(`Server listninig on port ${PORT}`);
